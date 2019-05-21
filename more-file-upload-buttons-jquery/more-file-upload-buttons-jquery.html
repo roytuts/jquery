@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Server Notifications</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script type="text/javascript">
+	$(document).ready(function() {
+		$("input[id^='upload_file']").each(function() {
+			var id = parseInt(this.id.replace("upload_file", ""));
+			$("#upload_file" + id).change(function() {
+				if ($("#upload_file" + id).val() != "") {
+					$("#moreImageUploadLink").show();
+				}
+			});
+		});
+	});
+	
+	$(document).ready(function() {
+		var upload_number = 2;
+		$('#attachMore').click(function() {
+			//add more file
+			var moreUploadTag = '';
+			moreUploadTag += '<div class="element"><label for="upload_file"' + upload_number + '>Upload File ' + upload_number + '</label>';
+			moreUploadTag += '<input type="file" id="upload_file' + upload_number + '" name="upload_file' + upload_number + '"/>';
+			moreUploadTag += ' <a href="javascript:del_file(' + upload_number + ')" style="cursor:pointer;" onclick="return confirm("Are you really want to delete ?")">Delete ' + upload_number + '</a></div>';
+			$('<dl id="delete_file' + upload_number + '">' + moreUploadTag + '</dl>').fadeIn('slow').appendTo('#moreImageUpload');
+			upload_number++;
+		});
+	});
+	
+	function del_file(eleId) {
+		var ele = document.getElementById("delete_file" + eleId);
+		ele.parentNode.removeChild(ele);
+	}
+</script>
+</script>
+</head>
+<body>
+	<div class="element">
+		<label>Upload file</label>
+		<input type="file" name="upload_file1" id="upload_file1"/>
+	</div>
+	<div id="moreImageUpload"></div>
+	<div class="clear"></div>
+	<div id="moreImageUploadLink" style="display:none;margin-left: 10px;">
+		<a href="javascript:void(0);" id="attachMore">Attach another file</a>
+	</div>
+</body>
+</html>
