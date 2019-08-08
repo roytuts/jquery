@@ -1,0 +1,48 @@
+<!doctype html>
+<html>
+<head>
+	<title>Display elements one by one from an array using jQuery</title>
+	<meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/jquery-ui.min.js"></script>
+	<script type="text/javascript">
+		$(function(){
+			var values = [
+				"hi",
+				"hello",
+				"nice",
+				"wonderful"
+			];
+			var counter = 0, totalElements = values.length;
+			$("#btn").on("click", function(){			
+				if(totalElements>1) {
+					$('#text-center').append(values[counter] + ' ');
+					counter = (counter + 1) % totalElements;
+				}
+			});
+		});
+		
+		/*$(function(){
+			var i=0, images = [
+				"<img src='first.png' />",
+				"<img src='second.png' />",
+				"<img src='third.png' />",
+				"<img src='kitten.png' />"
+			];
+
+			$('#btn').on("click", function(){
+				console.log('hi');
+				if (i>=images.length) return;
+				$('#text-center').append(images[i++]);
+			});
+		});*/
+	</script>
+</head>
+<body>
+	
+	<div id="text-center">
+		<button type="submit" id="btn">Click Here!</button>
+	</div>
+
+</body>
+</html>
