@@ -1,0 +1,50 @@
+#container{
+	width:600px;
+	margin:20px auto;
+	padding:15px;
+	background-color:#eee;
+}
+#addField{
+	padding:5px;
+	display:inline-block;
+	background-color:#3A9668;
+	color:#f1f1f1;
+	border:1px solid #005;
+}
+.removeField{
+	margin:auto;
+	margin-left:5px;
+	padding:5px;
+	display:inline-block;
+	background-color:#B02109;
+	color:#f1f1f1;
+	border:1px solid #005;
+}
+#addField:hover, .removeField:hover{
+	cursor: pointer;
+}
+label{
+	padding:0 10px;
+	display:block;
+	float:left;    
+	width:150px;
+}
+input, textarea{
+	padding:5px;
+	font-size: 14px;
+}
+input {
+	width: 250px;
+}
+textarea{
+	width:290px;
+	height:150px;
+}
+select {
+	padding:5px;
+}
+.btn-submit {
+	width: 100px;
+	background-color:#428BCA;
+	border-color:#357EBD;
+}

@@ -1,0 +1,61 @@
+<!doctype html>
+<html>
+<head>
+	<title>Add input fields to form dynamically using jQuery</title>
+	<meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+	<link rel="stylesheet" type="text/css" href="style.css"/>
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/jquery-ui.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){            
+            var $fieldCount = 0;
+            $('#addField').on('click', function(){
+                $(".error").remove();
+                $(".values").remove();
+                if($("#input_type").val()!=""){
+                    var $type = $("#input_type").val();
+                    $fieldCount++;;
+                    if($type == 1) {
+                        var $node = '<p><label for="text'+$fieldCount+'">Text '+$fieldCount+': </label><input type="text" name="text'+$fieldCount+'" id="text'+$fieldCount+'"/><span class="removeField">Remove</span></p>';
+                    } else if($type == 2) {
+                        var $node = '<p><label for="textarea'+$fieldCount+'">Textarea '+$fieldCount+': </label><textarea name="textarea'+$fieldCount+'" id="textarea'+$fieldCount+'"/><span class="removeField">Remove</span></p>';
+                    } else if($type == 3) {
+                        var $node = '<p><label for="file'+$fieldCount+'">File '+$fieldCount+': </label><input type="file" name="file'+$fieldCount+'" id="file'+$fieldCount+'"/><span class="removeField">Remove</span></p>';
+                    }
+                    $('p').last().after($node);
+                } else {
+                    $error_msg = "<p style='color:red;' class='error'>Select input type<p>";
+                    $('form').prepend($error_msg);
+                }
+            });
+            
+            $('form').on('click', '.removeField', function(){
+                $(this).parent().remove();
+            });            
+        });
+	</script>
+</head>
+<body>
+
+	<div id="container">
+		<h2>Add input fields to form dynamically using jQuery</h2>
+		
+        <form id="dynamic_inputs" method="post">            
+            <p>
+                <select name="input_type" id="input_type">
+                    <option value="">-- Select Type --</option>
+                    <option value="1">Text</option>
+                    <option value="2">Textarea</option>
+                    <option value="3">File</option>
+                </select>
+                <span id="addField">Add Field</span>
+            </p>
+            <p>
+                <label for="name">Name: </label>
+                <input id="name" type="text" name="name">
+            </p>
+        </form>
+    </div>
+
+</body>
+</html>
