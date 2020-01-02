@@ -1,0 +1,1 @@
+You can read tutorial https://www.roytuts.com/simple-image-slides-using-jquery/

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+	<script>
+		$( document ).ready(function() {
+			var images = [
+				'<div><img src="images/DSC_0339.jpg"></div>',
+				'<div><img src="images/DSC_0348.jpg"></div>',
+				'<div><img src="images/DSC_0934.jpg"></div>',
+				'<div><img src="images/DSC_2057m.jpg"></div>',
+				'<div><img src="images/DSC_2132.jpg"></div>',
+				'<div><img src="images/DSC_2174.jpg"></div>',
+				'<div><img src="images/DSC_2940.jpg"></div>',
+				'<div><img src="images/DSC_4258.jpg"></div>',
+				'<div><img src="images/DSC_5645.jpg"></div>'
+			];
+
+			$.each(images, function(i, img) {
+				$('#slider').append(img);
+			});	
+						
+			setInterval(function() {
+				$('#slider > div:first-child')
+					.fadeOut(2000)
+					.next()
+					.fadeIn(2000)
+					.end()
+					.appendTo('#slider');
+			},3000);
+		});
+	</script>
+	
+	<style>
+		#slider {
+			position: relative;
+		}
+
+		#slider > div {
+			position: absolute;
+		}
+	</style>
+</head>
+<body>
+    <div id="slider" style="width: 800px; margin: auto;">
+		<!--<div><img src="images/DSC_0339.jpg"></div>
+		<div><img src="images/DSC_0348.jpg"></div>
+		<div><img src="images/DSC_0934.jpg"></div>
+		<div><img src="images/DSC_2057m.jpg"></div>
+		<div><img src="images/DSC_2132.jpg"></div>
+		<div><img src="images/DSC_2174.jpg"></div>
+		<div><img src="images/DSC_2940.jpg"></div>
+		<div><img src="images/DSC_4258.jpg"></div>
+		<div><img src="images/DSC_5645.jpg"></div>-->
+	</div>
+</body>
+</html>
