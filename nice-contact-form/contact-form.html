@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Nice Contact Form Example</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!--<script type="text/javascript" src="jquery-1.9.1.min.js"></script>-->
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+	<script language="javascript" type="text/javascript" src="contact.js"></script>
+	<link rel="stylesheet" type="text/css" media="all" href="style.css" />
+</head>
+<body>
+	<div class="form">
+		<form action="" method="post" class="niceform">
+			<fieldset>
+				<legend>Nice Contact Form</legend>
+				<dl>
+					<dt><label for="name">Full Name:</label></dt>
+					<dd><input type="text" name="name" id="name" size="54" /></dd>
+				</dl>
+				<dl>
+					<dt><label for="email">Email Address:</label></dt>
+					<dd><input type="text" name="email" id="email" size="54" /></dd>
+				</dl>
+				<dl>
+					<dt><label for="website">Website:</label></dt>
+					<dd><input type="text" name="website" id="website" size="54" /></dd>
+				</dl>
+				<dl>
+					<dt><label for="message">Message:</label></dt>
+					<dd><textarea name="message" id="message" rows="8" cols="36"></textarea></dd>
+				</dl>
+				<dl class="submit">
+					<input type="submit" name="submit" id="submit" value="Submit" />
+				</dl>
+			</fieldset>
+		</form>
+	</div>
+</body>
+</html>
