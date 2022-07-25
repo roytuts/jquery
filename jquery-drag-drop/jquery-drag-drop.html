@@ -1,0 +1,48 @@
+<!doctype html>
+<html>
+<head>
+
+<title>jQuery Drag and Drop example</title>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="stylesheet" href="style.css">
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js" integrity="sha256-lSjKY0/srUM9BE3dPm+c4fBo1dky2v27Gdjm2uoZaL0=" crossorigin="anonymous"></script>
+
+<!--<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/jquery-ui.min.js"></script>-->
+<script type="text/javascript" src="dragdrop.js"></script>
+
+</head>
+<body>
+
+	<!--header message-->
+	<div class="aboutBox">
+		<h1>Drag and Drop with jQuery</h1>
+		<h2>Put the below colors at appropriate positions</h2>
+	</div>
+
+	<!--main content area-->
+	<div id="content">
+	 
+	<!--color queue where each color will be dragged from-->
+	<div id="colorQueue"> </div>
+
+	<!--initially empty color slots where each dragged color will be dropped on-->
+	<div id="colorSlots"> </div>
+
+	<!--show error message when correct slot is not selected for drop-->
+	<div id="errorMsg">
+		<h3>OOPs! Wrong selection. Please try again.</h3>
+	</div>
+
+	<!--show success message at the end when all colors are dropped correctly-->
+	<div id="successMsg">
+		<h2>You made it!</h2>
+		<button onclick="suffleColors()">Plot Again</button>
+	</div>
+
+</body>
+</html>
