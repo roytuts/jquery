@@ -3,6 +3,10 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
     <title>Use Multiple Versions of jQuery on the Same Page</title>
+	
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+	
+	<script> var $jq360 = jQuery.noConflict( true ); </script>
 
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>
 
@@ -10,9 +14,14 @@
     
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 
-    <script> var $jq1111 = jQuery.noConflict( true ); </script>
+    <script> var $jq1111 = jQuery.noConflict( true ); </script>	
 
-    <script type="text/javascript">       
+    <script type="text/javascript">  
+		$jq360(document).ready(function() {
+            console.log($jq360().jquery); // This prints v3.6.0
+            $jq360("div#jQuery360").css("color","green"); // Change text color
+        });
+		
         $jq132(document).ready(function() {
             console.log($jq132().jquery); // This prints v1.3.2
             $jq132("div#jQuery132").css("color","pink"); // Change text color
@@ -25,6 +34,7 @@
     </script>
 </head>
 <body>
+	<div id="jQuery360">Hello, I am jQuery 3.6.0</div>
     <div id="jQuery132">Hello, I am jQuery 1.3.2</div>
     <div id="jQuery1111">Hello, I am jQuery 1.11.1</div>
 </body>
