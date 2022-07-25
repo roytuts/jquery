@@ -1,1 +1,1 @@
-You can read tutorial at https://www.roytuts.com/using-multiple-versions-of-jquery-on-same-page/
+Please follow the tutorial at https://roytuts.com/using-multiple-versions-of-jquery-on-same-page/
