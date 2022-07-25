@@ -1,0 +1,166 @@
+/**
+* add style to entire body
+* ------------------------
+* margin from each side 10px
+* line height for each line 1.8em
+*/
+body {
+	margin: 10px;
+	font-family: "Georgia", serif;
+	line-height: 1.8em;
+	color: #333;
+}
+
+/**
+* font-family for headers
+*/
+h1, h2, h3 {
+	font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+}
+
+/**
+* main content area where colors and empty slots are placed
+* ---------------------------------------------------------
+* first we apply margin from all sides,
+* next we override top margin by 10px
+*
+*/
+#content {
+	margin: auto;
+	margin-top: 10px;
+	text-align: center;
+	-moz-user-select: none;
+	-webkit-user-select: none;
+}
+
+/**
+* header message with border
+*/
+.aboutBox {
+	clear: both;
+	text-align: center;
+	margin: auto;
+	padding: 10px;
+	background: #ebedf2;
+	border: 1px solid #333;
+	width: 910px;
+}
+
+.aboutBox h1 {
+	font-weight: bold;
+	margin: 5px;
+	color: #666;
+	font-size: 1.5em;
+}
+
+/**
+* empty slots
+*/
+#colorSlots {
+	margin: 20px auto 0 auto;
+	background: #ddf;
+}
+
+/**
+* color queue
+*/
+#colorQueue {
+	margin: 0 auto;
+	background: #ffd;
+}
+
+#colorSlots, #colorQueue {
+	width: 910px;
+	height: 120px;
+	padding: 20px;
+	border: 2px solid #333;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	border-radius: 10px;
+	-moz-box-shadow: 0 0 .3em rgba(0, 0, 0, .8);
+	-webkit-box-shadow: 0 0 .3em rgba(0, 0, 0, .8);
+	box-shadow: 0 0 .3em rgba(0, 0, 0, .8);
+}
+
+#colorSlots div, #colorQueue div {
+	float: left;
+	width: 58px;
+	height: 78px;
+	padding: 10px;
+	padding-top: 40px;
+	padding-bottom: 0;
+	border: 2px solid #333;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	border-radius: 10px;
+	margin: 0 0 0 10px;
+	background: #fff;
+}
+
+#colorSlots div:first-child, #colorQueue div:first-child {
+	margin-left: 0;
+}
+
+#colorSlots div.hovered {
+	background: #aaa;
+}
+
+#colorSlots div {
+	border-style: dashed;
+}
+
+#colorQueue div {
+	background: #666;
+	color: #fff;
+	font-size: 50px;
+	text-shadow: 0 0 3px #000;
+}
+
+#colorQueue div.ui-draggable-dragging {
+	-moz-box-shadow: 0 0 .5em rgba(0, 0, 0, .8);
+	-webkit-box-shadow: 0 0 .5em rgba(0, 0, 0, .8);
+	box-shadow: 0 0 .5em rgba(0, 0, 0, .8);
+}
+
+/**
+* success message div
+* position: absolute because it will be shown as popup
+*/
+#successMsg {
+	position: absolute;
+	left: 580px;
+	top: 250px;
+	width: 0;
+	height: 0;
+	z-index: 100;
+	background: #dfd;
+	border: 2px solid #333;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	border-radius: 10px;
+	-moz-box-shadow: .3em .3em .5em rgba(0, 0, 0, .8);
+	-webkit-box-shadow: .3em .3em .5em rgba(0, 0, 0, .8);
+	box-shadow: .3em .3em .5em rgba(0, 0, 0, .8);
+	padding: 20px;
+}
+
+/**
+* error message div
+*/
+#errorMsg {
+	background: #dfd;
+	border: 2px solid #333;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	border-radius: 10px;
+	-moz-box-shadow: .3em .3em .5em rgba(0, 0, 0, .8);
+	-webkit-box-shadow: .3em .3em .5em rgba(0, 0, 0, .8);
+	box-shadow: .3em .3em .5em rgba(0, 0, 0, .8);
+	padding: 20px;
+	color: red;
+	height: 60px;
+	width: 380px;
+	margin: auto;
+	margin-top: 10px;
+	position: relative;
+}
