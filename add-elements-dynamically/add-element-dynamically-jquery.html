@@ -4,8 +4,11 @@
 	<title>Add input fields to form dynamically using jQuery</title>
 	<meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
 	<link rel="stylesheet" type="text/css" href="style.css"/>
-	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/jquery-ui.min.js"></script>
+	<!--<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>-->
+	<!--<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/jquery-ui.min.js"></script>-->
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous
+	"></script>
+	<script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js" integrity="sha256-lSjKY0/srUM9BE3dPm+c4fBo1dky2v27Gdjm2uoZaL0=" crossorigin="anonymous"></script>
 	<script type="text/javascript">
 		$(document).ready(function(){            
             var $fieldCount = 0;
@@ -18,7 +21,7 @@
                     if($type == 1) {
                         var $node = '<p><label for="text'+$fieldCount+'">Text '+$fieldCount+': </label><input type="text" name="text'+$fieldCount+'" id="text'+$fieldCount+'"/><span class="removeField">Remove</span></p>';
                     } else if($type == 2) {
-                        var $node = '<p><label for="textarea'+$fieldCount+'">Textarea '+$fieldCount+': </label><textarea name="textarea'+$fieldCount+'" id="textarea'+$fieldCount+'"/><span class="removeField">Remove</span></p>';
+                        var $node = '<p><label for="textarea'+$fieldCount+'">Textarea '+$fieldCount+': </label><textarea name="textarea'+$fieldCount+'" id="textarea'+$fieldCount+'"></textarea><span class="removeField">Remove</span></p>';
                     } else if($type == 3) {
                         var $node = '<p><label for="file'+$fieldCount+'">File '+$fieldCount+': </label><input type="file" name="file'+$fieldCount+'" id="file'+$fieldCount+'"/><span class="removeField">Remove</span></p>';
                     }
