@@ -1,1 +1,1 @@
-You can read tutorial https://www.roytuts.com/add-input-fields-to-form-dynamically-using-jquery/
+Please follow the tutorial https://roytuts.com/add-input-fields-to-form-dynamically-using-jquery/
