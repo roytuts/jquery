@@ -1,1 +1,1 @@
-You can read tutorial https://www.roytuts.com/more-file-upload-button-attachment-dynamically-using-jquery/
+Please follow the tutorial https://roytuts.com/more-file-upload-button-attachment-dynamically-using-jquery/
