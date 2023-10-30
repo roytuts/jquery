@@ -1,1 +1,1 @@
-You can read tutorial https://roytuts.com/preview-form-using-jquery/
+Please follow the tutorial https://roytuts.com/preview-form-using-jquery/
