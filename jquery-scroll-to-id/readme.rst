@@ -1,1 +1,1 @@
-You can read tutorial https://www.roytuts.com/scroll-to-a-section-having-id-attribute-using-jquery/
+Please follow the tutorial https://roytuts.com/scroll-to-a-section-having-id-attribute-using-jquery/
