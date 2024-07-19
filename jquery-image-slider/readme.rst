@@ -1,1 +1,1 @@
-You can read tutorial https://www.roytuts.com/simple-image-slides-using-jquery/
+Please follow the tutorial https://roytuts.com/simple-image-slides-using-jquery/
